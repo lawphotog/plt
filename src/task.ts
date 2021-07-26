@@ -21,7 +21,11 @@ const getStockQtyBySKU = (sku: string) => {
         return item.sku == sku
     })
 
-    return currentStockLevel[0].stock
+    if(currentStockLevel.length < 1) {
+        return 0
+    } else {
+        return currentStockLevel[0].stock
+    }
 }
 
 const calculateStock = (sku: string, totalRefund: number, totalSold: number) => {
