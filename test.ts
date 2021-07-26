@@ -1,5 +1,5 @@
 import test from 'ava';
-import * as Task from "./src/task";
+import * as Task from "./src/stockchecker";
 
 const fn = () => 'foo';
 
